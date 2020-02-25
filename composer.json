@@ -11,6 +11,7 @@
     "require": {
         "php": ">=5.3.3",
         "zendframework/zendframework": "2.3.*@stable",
-        "oauth-io/oauth": "0.2.0"
+        "oauth-io/oauth": "0.3.2",
+        "mashape/unirest-php": "3.*"
     }
 }

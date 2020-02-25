@@ -19,9 +19,9 @@ function authenticate(token, callback) {
 		state: token,
 		// Google requires the following field 
 		// to get a refresh token
-		authorize: {
-		    approval_prompt: 'force'
-		}
+		//authorize: {
+		   // approval_prompt: 'force'
+		//}
 	})
 		.done(function(r) {
 			$.ajax({
