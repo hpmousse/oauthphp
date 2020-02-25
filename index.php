@@ -1,5 +1,6 @@
 <?php
 
+require_once '/vendor/autoload.php';
 use OAuth_io\OAuth;
 
 $oauth = new OAuth();
