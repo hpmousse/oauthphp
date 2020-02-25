@@ -8,7 +8,7 @@ $oauth->initialize('S3HRKiyOpoKAyCHNB8RCZqRoV1w', 'qKVuYvpguf2nC_HdHsGK4');
 
 // Exemple with Google (using ZendFramwork, Controller /oauth)
 // Action /signin (url: /oauth/authorize)
-signinAction(provider) {
+function signinAction(provider) {
     try {
         $this->oauth->redirect(provider, 'index.php');
     } catch (\Exception $e) {
@@ -17,9 +17,9 @@ signinAction(provider) {
 }
 
 // Action /redirect (url: /oauth/redirect)
-redirectAction() {
+function redirectAction(provider) {
     try {
-        $request_object = $this->oauth->auth('spotify', array(
+        $request_object = $this->oauth->auth(provider, array(
             'redirect' => true
         ));
     } catch (\Exception $e) {
