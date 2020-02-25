@@ -7,7 +7,7 @@ $oauth = new OAuth();
 $oauth->initialize('S3HRKiyOpoKAyCHNB8RCZqRoV1w', 'qKVuYvpguf2nC_HdHsGK4');
 
 
-$oauth->redirect('spotify', 'index.php');
+$request_object = $this->oauth->auth('spotify');
 
 if($request_object){
 	$request_object = $oauth->auth('spotify', array(
@@ -17,7 +17,7 @@ if($request_object){
 	$result = $request_object->me(array('firstname', 'lastname', 'email'));
 	dump($result);
 }else{
-	signinAction('spotify');
+	$oauth->redirect('spotify', '/index.php');
 }
 
 
