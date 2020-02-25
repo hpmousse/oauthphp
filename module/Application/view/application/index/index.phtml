@@ -1,0 +1,72 @@
+<div class="jumbotron">
+    <div class="container">
+        <h3>OAuth.io server side tutorial with PHP</h3>
+        <p>
+        This tutorial helps you understand how to integrate OAuth.io to your PHP backend.
+        </p>
+        <div>
+            <button class="btn btn-primary" id="login_button">Login</button>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-6">
+            <h3>Your profile</h3>
+            <div class="row">
+                <div class="col-xs-9">
+                    <p>
+                    All this info is retrieved through your backend.
+                    </p>
+                    <p>
+                    <strong>Your name :</strong> <span id="name_box">Not retrieved yet</span>
+                    </p>
+                    <p>
+                    <strong>Your email :</strong> <span id="email_box">Not retrieved yet</span>
+                    </p>
+                </div>
+                <div class="col-xs-3">
+                    <a href="#" class="thumbnail">
+                    <img id="img_box" src="http://placehold.it/100x100" alt="...">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-6">
+            <?php if ($this->error): ?>
+            <div class="alert alert-danger">
+                <div>The file <code>module/Application/config/config.php</code> was not found.</div>
+                <br>
+                <div>
+                    Please copy and rename the <code>config.example.php</code> it that directory to <code>config.php</code>
+                    and configure the project with your values (see README.md for more info).
+                </div>
+            </div>
+            <?php endif ?>
+            <div class="alert alert-warning token_endpoint_missing missing">
+                <div>State token endpoint not available. Go to <strong>step-2</strong> if you want to skip that step.</div>
+                <div>Note that all your changes will be discarded</div>
+<pre>$ git checkout step-2 --force</pre>
+            </div>
+            <div class="alert alert-success token_endpoint_available available">
+                <div>Token endpoint is available on <strong>/oauth/token</strong></div>
+            </div>
+            <div class="alert alert-warning auth_endpoint_missing missing">
+                <div>Auth endpoint not available. Go to <strong>step-3</strong> if you want to skip that step.</div>
+                <div>Note that all your changes will be discarded</div>
+<pre>$ git checkout step-3 --force</pre>
+            </div>
+            <div class="alert alert-success auth_endpoint_available available">
+                <div>Auth endpoint is available on <strong>/oauth/signin</strong></div>
+            </div>
+            <div class="alert alert-warning request_endpoint_missing missing">
+                <div>Request endpoint not available. Go to <strong>step-4</strong> if you want to skip that step.</div>
+                <div>Note that all your changes will be discarded</div>
+<pre>$ git checkout step-4 --force</pre>
+            </div>
+            <div class="alert alert-success request_endpoint_available available">
+                <div>Request endpoint is available on <strong>/me</strong></div>
+            </div>
+        </div>
+    </div>
+</div>
