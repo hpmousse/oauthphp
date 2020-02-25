@@ -7,7 +7,7 @@
         "zf2"
     ],
     "minimum-stability": "dev",
-    "homepage": "http://framework.zend.com/",
+    "homepage": "https://framework.zend.com/",
     "require": {
         "php": ">=5.3.3",
         "zendframework/zendframework": "2.3.*@stable",
